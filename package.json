@@ -1,0 +1,29 @@
+{
+  "name": "zoomChat",
+  "version": "1.0.0",
+  "description": "A Simple Zoom chat room like project.",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon ./js/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssroma/Zoom-Clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssroma/Zoom-Clone/issues"
+  },
+  "homepage": "https://github.com/ssroma/Zoom-Clone#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "socket.io": "^3.0.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
