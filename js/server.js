@@ -19,6 +19,16 @@ app.get('/:room', (req, res) => {
     res.render('room', { roomId: req.params.room });
 });
 
+io.on('connection', socket => {
+    socket.on('join-room', (roomId, userId) => {
+        socket.join(roomId);
+        socket.to(roomId).broadcast.emit('user-connected', userId);
+
+        socket.on('disconnect', () => {
+            socket.to(roomId).broadcast.emit('user-disconnect', userId);
+        });
+    })
+});
 
 
 // Server will run on port 3000
